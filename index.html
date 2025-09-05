@@ -1,0 +1,774 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Create Pro Level Videos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: 'Inter', sans-serif;
+      color: #2a2a2a;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Container */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem 4rem;
+    }
+    /* Header */
+    header {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    header h1 {
+      font-family: 'Anton', sans-serif;
+      font-weight: normal;
+      font-size: 2.5rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin: 0;
+      color: #2a2a2a;
+    }
+    @media (min-width: 640px) {
+      header h1 {
+        font-size: 3rem;
+      }
+    }
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 3.5rem;
+      }
+    }
+    header p.subtitle {
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+      color: #2a2a2a;
+    }
+    /* Buttons container */
+    .btn-group {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    /* Buttons */
+    .btn {
+      font-size: 0.875rem;
+      font-weight: 400;
+      border-radius: 9999px;
+      padding: 0.5rem 1.5rem;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+    .btn-white {
+      background-color: #fff;
+      color: #2a2a2a;
+    }
+    .btn-white:hover {
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    }
+    .btn-purple {
+      background-color: #6c63ff;
+      color: #fff;
+    }
+    .btn-purple:hover {
+      background-color: #5a52e6;
+    }
+    /* Small text below buttons */
+    .small-text {
+      margin-top: 0.5rem;
+      font-size: 0.625rem;
+      color: #7a7a7a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      user-select: none;
+    }
+    .small-text i {
+      font-size: 0.375rem;
+    }
+    /* Navigation tags */
+    
+    /* Subtitle below nav */
+    .nav-subtitle {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: #6b6b9f;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    
+
+   
+    /* Image container */
+    .image-container {
+      margin-top: 1.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+    .container-client {
+      max-width: 100%;
+      padding: 2rem 1rem 1.5rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.125rem; /* 18px */
+       user-select: none;
+    }
+    .logo-row-client {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      padding: 0 1rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none; /* Firefox */
+    }
+    .logo-row-client::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+    .logo-client {
+      flex-shrink: 0;
+      max-height: 40px;
+      width: auto;
+      height: 40px;
+    }
+    @media (max-width: 640px) {
+      .container {
+        font-size: 1rem; /* 16px */
+        padding-top: 1.5rem;
+        padding-bottom: 1rem;
+      }
+      .logo-row-client {
+        gap: 1.5rem;
+      }
+      .logo-client {
+        max-height: 30px;
+        height: 30px;
+      }
+    }
+
+    .logo-wrpper{
+      margin-top: 30px;
+    }
+        .container-section1 {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      box-sizing: border-box;
+      justify-content: center;
+    }
+
+    /* Flex layout for top section */
+    .top-section {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .top-section {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 64px;
+      }
+    }
+
+    /* Left side */
+    .left-side {
+      flex: 1;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .heading {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    @media (min-width: 640px) {
+      .heading {
+        font-size: 36px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .heading {
+        font-size: 40px;
+      }
+    }
+
+    .btn-shopify {
+      display: inline-flex;
+      align-items: center;
+      background-color: #000;
+      color: #fff;
+      font-size: 12px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-weight: 500;
+      gap: 6px;
+      width: max-content;
+      cursor: default;
+      user-select: none;
+    }
+
+    .btn-shopify i {
+      color: #22c55e; /* green-500 */
+      font-size: 18px;
+    }
+
+    .btn-shopify span:last-child {
+      font-weight: 700;
+    }
+
+    /* Stats list */
+    .stats-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .stat-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: #000;
+      flex-shrink: 0;
+    }
+
+    .stat-icon.green {
+      background-color: #dcfce7; /* green-100 */
+      color: #15803d; /* green-700 */
+    }
+
+    .stat-icon.purple {
+      background-color: #ede9fe; /* purple-100 */
+      color: #6b21a8; /* purple-700 */
+    }
+
+    .stat-icon.orange {
+      background-color: #ffedd5; /* orange-100 */
+      color: #c2410c; /* orange-600 */
+    }
+
+    .stat-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      margin: 0;
+    }
+
+    .stat-desc {
+      font-size: 12px;
+      color: #6b7280; /* gray-500 */
+      margin: 2px 0 0 0;
+      line-height: 1.2;
+      max-width: 280px;
+    }
+
+    /* Right side image */
+    .right-side {
+          flex: 1;
+      display: flex;
+
+
+      
+    }
+
+    .right-side img {
+      border-radius: 16px;
+      
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media (min-width: 640px) {
+      .right-side img {
+        
+        width: 320px;
+        
+      }
+   
+    }
+
+    @media (min-width: 768px) {
+      .right-side img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+
+    /* Bottom section */
+    .bottom-section {
+      margin-top: 38px;
+      background-color: #f9fafb; /* gray-50 */
+      border-radius: 16px;
+      padding: 32px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    @media (min-width: 640px) {
+      .bottom-section {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .bottom-left {
+      max-width: 320px;
+    }
+
+    .bottom-left p.title {
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+    }
+
+    .bottom-left p.desc {
+      font-size: 14px;
+      margin: 0 0 16px 0;
+      line-height: 1.4;
+    }
+
+    .bottom-left a.learn-more {
+      font-size: 12px;
+      font-weight: 700;
+      color: #000;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .bottom-left a.learn-more:hover {
+      text-decoration: none;
+    }
+
+    /* Circles container */
+    .circles-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex: 1;
+      max-width: 720px;
+    }
+
+    .circle-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: 80px;
+    }
+
+    .circle-svg {
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .circle-svg svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      transform: rotate(-90deg);
+    }
+
+    .circle-bg {
+      stroke: #ddd;
+      stroke-width: 6;
+      fill: none;
+    }
+
+    .circle-progress {
+      stroke: #7c3aed;
+      stroke-width: 6;
+      stroke-linecap: round;
+      fill: none;
+      stroke-dasharray: 282.6;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s ease;
+    }
+
+    .circle-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700;
+      font-size: 18px;
+      color: #7c3aed;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .circle-label {
+      font-size: 12px;
+      font-weight: 700;
+      user-select: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 639px) {
+      .circles-container {
+        gap: 16px;
+      }
+    }
+
+    .founder-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;        /* use px or clamp for better scaling */
+  color: #333333;
+  max-width: 288px;       /* allow it to shrink instead of fixed width */
+  width: 100%;            /* take full width on mobile */
+  margin-top: 0px;
+}
+
+.founder-name {
+  font-size: 13px;
+  font-weight: bold;
+  color: #5a52e6;
+}
+
+
+    
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+       From Incorporation to Fundraising Success <br />
+       
+      </h1>
+      <p class="subtitle">We don’t just file your paperwork. With 35+ years of experience and $180M raised for 
+clients, Philanthrovia Group helps nonprofits, NGOs, and philanthropists build, fund, and 
+grow organizations that create lasting change</p>
+      <div class="btn-group">
+        <button class="btn btn-white" type="button">learn More</button>
+        <button class="btn btn-purple" type="button">
+          Book your free consultaiion<i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="small-text">
+        <span>*Your first step toward funding success</span>
+        <i class="fas fa-circle"></i>
+        <span>Talk to an expert who’s helped raise $180M+</span>
+      </div>
+    </header>
+    <div> </div>
+
+  <div class="logo-wrpper">
+  <div class="logo-row-client" role="list">
+    <img src="alliant.jpg" alt="Spotify logo black circle with three curved lines inside" class="logo-client" />
+    <img src="simiValley.jpg" alt="Microsoft logo black four squares" class="logo-client" />
+    <img src="redCross.jpg" alt="Google logo black text" class="logo-client" />
+    <img src="cudah.jpg" alt="Webflow logo black cursive text" class="logo-client" />
+    <img src="circletheCity.jpg" alt="Dribbble logo black cursive text" class="logo-client" />
+    
+  </div>
+ </div>
+
+    <p class="nav-subtitle">
+     Organizations across the U.S. and internationally rely on us
+    </p>
+    <div class="image-container">
+      <img
+        src="hero.jpg"
+        alt=""
+      />
+    </div>
+  </div>
+
+
+  <section>
+    <div class="container-section1">
+    <section class="top-section">
+      <div class="left-side">
+        <h2 class="heading">
+            Launch Your Nonprofit for 
+<br />
+          Half the Cost of an Attorney
+        </h2>
+        <button style="text-align: left;" class="btn-shopify" disabled>
+          <span> Rated #1 Nonprofit Startup Service <br></span>
+        </button>
+        <div class="stats-list">
+          <div class="stat-item">
+            <div class="stat-icon green">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="stat-text ">
+              <p class="stat-number countup" data-target="25" data-suffix="+" data-format="compact">0</p>
+              <p class="stat-desc">over 25 successful nonprofit incorporations completed</p>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon purple">
+              <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="stat-text">
+              <p class="stat-number countup" data-target="50" data-suffix="%" data-format="normal">0</p>
+              <p class="stat-desc">cost savings vs. attorney</p>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon orange">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <div class="stat-text">
+              <p class="stat-number countup" data-target="2500" data-format="compact">0</p>
+              <p class="stat-desc">starting price + filing fees</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column;">
+      <div class="right-side">
+        <img
+          src="carrie.jpg"
+          alt=""
+          loading="lazy"
+          width="400"
+          height="470"
+        />
+       
+      </div>
+      <p class="founder-text">
+  Led by <span class="founder-name">Carrie Roberts</span>, our founder and a grant writing mastermind
+</p>
+    </div>
+    </section>
+
+    <section id="social-section" class="bottom-section">
+      <div class="bottom-left">
+        <p class="desc">At Philanthrovia Group, we’ve empowered 25+ nonprofits with expert incorporation and funding support, saving clients 50% compared to attorneys. Trust our proven track record to launch your mission affordably and effectively.</p>
+        <a href="#" class="learn-more" tabindex="0">
+          Start Your Nonprofit Journey <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="circles-container">
+        <div class="circle-item">
+          <div class="circle-svg" data-percentage="89">
+            <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+              <circle class="circle-progress" cx="50" cy="50" r="45" stroke-dashoffset="0"></circle>
+            </svg>
+            <div class="circle-text">89%</div>
+          </div>
+          <p class="circle-label">Raised 89% of funding <br> goals for clients</p>
+        </div>
+        <div class="circle-item">
+          <div class="circle-svg" data-percentage="72">
+            <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+              <circle class="circle-progress" cx="50" cy="50" r="45" stroke-dashoffset="0"></circle>
+            </svg>
+            <div class="circle-text">72%</div>
+          </div>
+          <p class="circle-label">Secured 72% more funding <br> than industry average</p>
+        </div>
+        <div class="circle-item">
+          <div class="circle-svg" data-percentage="79">
+            <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+              <circle class="circle-progress" cx="50" cy="50" r="45" stroke-dashoffset="0"></circle>
+            </svg>
+            <div class="circle-text">79%</div>
+          </div>
+          <p class="circle-label">Achieved 79% grant success <br> rate for nonprofits</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  </section>
+
+
+
+
+
+  <script>
+    // Format large numbers compactly (e.g. 6000000 -> 6 million)
+    function formatCompact(num) {
+      if (num >= 1e9) return (num / 1e9).toFixed(1).replace(/\.0$/, "") + " billion";
+      if (num >= 1e6) return (num / 1e6).toFixed(1).replace(/\.0$/, "") + " million";
+      if (num >= 1e3) return (num / 1e3).toFixed(1).replace(/\.0$/, "") + "k";
+      return num.toString();
+    }
+
+    // Animate counting from 0 to target for an element
+    function animateCount(el) {
+      const targetStr = el.getAttribute("data-target");
+      if (!targetStr) return;
+      const suffix = el.getAttribute("data-suffix") || "";
+      const format = el.getAttribute("data-format") || "normal";
+      let target = Number(targetStr);
+      if (isNaN(target)) return;
+
+      let start = 0;
+      const duration = 2000; // 2 seconds
+      const startTime = performance.now();
+
+      function update(now) {
+        const elapsed = now - startTime;
+        if (elapsed < duration) {
+          const progress = elapsed / duration;
+          let current = Math.floor(progress * target);
+          if (format === "compact") {
+            el.textContent = formatCompact(current);
+          } else {
+            el.textContent = current.toLocaleString() + suffix;
+          }
+          requestAnimationFrame(update);
+        } else {
+          // End state
+          if (format === "compact") {
+            el.textContent = formatCompact(target);
+          } else {
+            el.textContent = target.toLocaleString() + suffix;
+          }
+        }
+      }
+      requestAnimationFrame(update);
+    }
+
+    // Animate circle stroke dashoffset for progress circles
+    function animateCircle(circleSvg) {
+      const circleProgress = circleSvg.querySelector(".circle-progress");
+      const percentage = Number(circleSvg.getAttribute("data-percentage"));
+      if (isNaN(percentage)) return;
+
+      const radius = 45;
+      const circumference = 2 * Math.PI * radius;
+      const offsetTarget = circumference * (1 - percentage / 100);
+
+      let start = null;
+      const duration = 1500;
+
+      function animate(time) {
+        if (!start) start = time;
+        const elapsed = time - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const offset = circumference - progress * (circumference - offsetTarget);
+        circleProgress.style.strokeDashoffset = offset;
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      }
+
+      // Initialize strokeDasharray and strokeDashoffset
+      circleProgress.style.strokeDasharray = circumference;
+      circleProgress.style.strokeDashoffset = circumference;
+
+      requestAnimationFrame(animate);
+    }
+
+    // Intersection Observer to trigger animations when in view
+    document.addEventListener("DOMContentLoaded", () => {
+      const countElements = document.querySelectorAll(".countup");
+      const circleSvgs = document.querySelectorAll(".circle-svg");
+
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains("countup")) {
+              animateCount(entry.target);
+              obs.unobserve(entry.target);
+            } else if (entry.target.classList.contains("circle-svg")) {
+              animateCircle(entry.target);
+              obs.unobserve(entry.target);
+            }
+          }
+        });
+      }, options);
+
+      countElements.forEach((el) => observer.observe(el));
+      circleSvgs.forEach((el) => observer.observe(el));
+    });
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
