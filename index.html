@@ -8,16 +8,27 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet"
   />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
     /* Reset and base */
-    * {
-      box-sizing: border-box;
-    }
+     * {
+    box-sizing: border-box;
+  }
+
     body {
-      margin: 0;
-      background-color: #f0f0f0;
+    margin: 0;
+      background-color: var(--ivory);
       font-family: 'Inter', sans-serif;
       color: #2a2a2a;
       -webkit-font-smoothing: antialiased;
@@ -64,7 +75,7 @@
     header p.subtitle {
       font-size: 0.875rem;
       margin-top: 0.5rem;
-      color: #2a2a2a;
+      color: var(--deep-charcoal);
     }
     /* Buttons container */
     .btn-group {
@@ -97,17 +108,17 @@
       box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
     }
     .btn-purple {
-      background-color: #6c63ff;
+      background-color: var(--muted-gold);
       color: #fff;
     }
     .btn-purple:hover {
-      background-color: #5a52e6;
+      background-color: var(--nude-beige);
     }
     /* Small text below buttons */
     .small-text {
       margin-top: 0.5rem;
       font-size: 0.625rem;
-      color: #7a7a7a;
+      color: var(--muted-gold);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -123,7 +134,7 @@
     .nav-subtitle {
       margin-top: 0.5rem;
       font-size: 0.75rem;
-      color: #6b6b9f;
+      color: var(--muted-gold);
       max-width: 640px;
       margin-left: auto;
       margin-right: auto;
@@ -259,14 +270,7 @@
       user-select: none;
     }
 
-    .btn-shopify i {
-      color: #22c55e; /* green-500 */
-      font-size: 18px;
-    }
-
-    .btn-shopify span:last-child {
-      font-weight: 700;
-    }
+  
 
     /* Stats list */
     .stats-list {
@@ -452,7 +456,7 @@
     }
 
     .circle-progress {
-      stroke: #7c3aed;
+      stroke: var(--muted-gold);
       stroke-width: 6;
       stroke-linecap: round;
       fill: none;
@@ -468,7 +472,7 @@
       transform: translate(-50%, -50%);
       font-weight: 700;
       font-size: 18px;
-      color: #7c3aed;
+      color: var(--sage-green);
       line-height: 1;
       user-select: none;
     }
@@ -498,11 +502,970 @@
 .founder-name {
   font-size: 13px;
   font-weight: bold;
-  color: #5a52e6;
+  color: var(--muted-gold);
+}
+
+  :root {
+    --nude-beige: #E9DAC1;
+    --warm-taupe: #C9B79C;
+    --ivory: #f5f3f0;
+    --sage-green: #A3B18A;
+    --deep-charcoal: #333333; 
+    --muted-gold: #C2A671;
+  }
+
+
+
+  footer {
+    padding: 20px;
+    background-color: var(--ivory);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--warm-taupe);
+    font-size: 14px;
+  }
+
+  footer img {
+    display: block;
+    margin: 0 auto 8px;
+    width: 100px;
+    height: auto;
+  }
+
+  footer p {
+    margin: 0 0 6px;
+  }
+
+
+
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 20px;
+  }
+
+  .social-icons a {
+    color: var(--warm-taupe);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover,
+  .social-icons a:focus {
+    color: var(--deep-charcoal);
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    footer {
+      font-size: 12px;
+    }
+    nav a {
+      margin: 0 4px;
+      font-size: 12px;
+    }
+    .social-icons {
+      font-size: 18px;
+      gap: 12px;
+    }
+  }
+    .section2 {
+
+    font-family: 'Inter', sans-serif;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 24px 64px;
+  }
+
+  .container-sec2 {
+        box-sizing: border-box;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @media (min-width: 1024px) {
+    .container-sec2 {
+      flex-direction: row;
+      align-items: center;
+      gap: 64px;
+    }
+  }
+
+  .left {
+    flex: 1;
+  }
+
+  .right {
+    flex: 1;
+  }
+
+
+  .h2 {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+    color: #3B3B3B;
+  }
+
+  @media (min-width: 640px) {
+    .h2 {
+      font-size: 36px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .h2 {
+      font-size: 40px;
+    }
+  }
+
+  .highlight {
+    color: #B4975A;
+    font-weight: 700;
+  }
+
+  .highlight br {
+    display: none;
+  }
+
+  @media (min-width: 640px) {
+    .highlight br {
+      display: block;
+    }
+  }
+    .subtitle-section2 {
+    font-weight: 600;
+    font-size: 10px;
+    color: #9CA17B;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.1em;
+  }
+
+  p.description {
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 480px;
+    margin-bottom: 24px;
+  }
+
+  ul.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px 0;
+    max-width: 320px;
+    color: var(--deep-charcoal);
+  }
+
+  ul.features li {
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  ul.features li svg {
+    margin-top: 4px;
+    flex-shrink: 0;
+    color: #9CA17B;
+    width: 12px;
+    height: 12px;
+  }
+
+  p.note {
+    font-size: 13px;
+    max-width: 480px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+
+  p.note span.line-through {
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+    text-decoration-color: rgba(59, 59, 59, 0.3);
+  }
+
+  .trusted {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 320px;
+    border-top: 1px solid #D9D6C3;
+    padding-top: 16px;
+  }
+
+  .avatars {
+    display: flex;
+    margin-left: -8px;
+    gap: 0px;
+  }
+
+  .avatars img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: 8px;
+    object-fit: cover;
+  }
+
+  .trusted-text {
+    font-size: 10px;
+    color: #3B3B3B;
+  }
+
+  .trusted-text strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .rating {
+    color: #B4975A;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .rating span.stars {
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .rating span.score {
+    color: #3B3B3B;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .image-wrapper {
+    
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .image-wrapper img {
+
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+  }
+
+  .badges {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .badge {
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 4px 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    white-space: nowrap;
+  }
+
+  .badge.white {
+    background: white;
+    color: #3B3B3B;
+  }
+
+  .badge.gold {
+    background: #B4975A;
+    color: white;
+  }
+
+  @media (min-width: 1024px) {
+    .section2 {
+      padding: 64px 80px 64px;
+    }
+  }
+    .image-container img {
+    max-width: 100%;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 0.15);
+    object-fit: cover;
+  }
+
+  /* Container */
+
+  .seclearnbg{
+        background-color: #e6d7be;
+        width: 100%;
+        left: 0px;
+        position: relative;
+
+
+  }
+  .seclearn {
+    background-color: #e6d7be;
+    max-width: 1120px;
+    margin: 0 auto;
+    
+    padding: 40px 24px 64px 24px;
+  }
+
+  /* Flex container for image and content */
+  .flex-row {
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media (min-width: 768px) {
+    .flex-row {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 48px;
+    }
+  }
+
+  /* Left side image container */
+  .image-container {
+    flex: 1 1 0;
+    max-width: 600px;
+  }
+
+  /* Right side content container */
+  .content-container {
+    flex: 1 1 0;
+    max-width: 480px;
+  }
+
+  /* Section label */
+  .section-label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #8a9a7f;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  /* Heading */
+  .h24 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+    color: #222222;
+  }
+  @media (min-width: 640px) {
+    .h24 {
+      font-size: 2rem;
+    }
+  }
+  .h24 .gold {
+    color: #b19d6a;
+  }
+
+  /* Paragraph */
+  .p {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    color: #4a4a4a;
+    margin-top: 0;
+    margin-bottom: 24px;
+    max-width: 400px;
+  }
+
+  /* Grid for the four coaching items */
+  .coaching-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 400px;
+    margin-bottom: 32px;
+  }
+  @media (min-width: 640px) {
+    .coaching-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Each coaching item */
+  .coaching-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: default;
+  }
+  .coaching-item i {
+    color: #8a9a7f;
+    font-size: 18px;
+    min-width: 20px;
+    text-align: center;
+  }
+  .coaching-item span {
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: #222222;
+  }
+
+  /* List for "We also provide" */
+  .also-provide-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    max-width: 400px;
+  }
+  .also-provide-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 0.875rem;
+    color: #4a4a4a;
+  }
+  .also-provide-list li:last-child {
+    margin-bottom: 0;
+  }
+  .also-provide-list li .icon-circle {
+    background: #fff;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8a9a7f;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  /* Final small paragraph */
+  .final-text {
+    font-size: 0.75rem;
+    color: #4a4a4a;
+    max-width: 400px;
+    line-height: 1.4;
+  }
+   .container-testimonial {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 16px 40px 16px;
+  }
+  .header-testimonial {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .header-testimonial h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+  .header-testimonial p {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    margin: 0 auto 8px auto;
+    max-width: 280px;
+    color: #3B3B3B;
+  }
+  .underline {
+    width: 48px;
+    height: 2px;
+    background-color: #A87C4A;
+    margin: 0 auto;
+  }
+  .testimonials {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 768px) {
+    .testimonials {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .testimonial {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    padding: 24px;
+    position: relative;
+  }
+  .testimonial .quote-icon {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.15;
+    user-select: none;
+    pointer-events: none;
+  }
+  .stars {
+    color: #A87C4A;
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 8px;
+  }
+  .stars i {
+    margin-right: 2px;
+  }
+  .testimonial-text {
+    font-style: italic;
+    font-size: 11px;
+    line-height: 14px;
+    margin-bottom: 16px;
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .author img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .author-info {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .author-info p:first-child {
+    font-weight: 600;
+    margin: 0 0 2px 0;
+  }
+  .author-info p:last-child {
+    margin: 0;
+  }
+
+.container-org {
+      margin-top: 20px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .container-org h2 {
+      font-weight: 600;
+      color: #222222;
+      font-size: 18px;
+      margin: 0;
+    }
+    p.description {
+      font-size: 10px;
+      color: #666666;
+      max-width: 320px;
+      line-height: 1.2;
+    }
+    .underline {
+      width: 48px;
+      height: 2px;
+      background-color: #a67c00;
+      margin: 12px auto 0;
+    }
+    /* Organizations list */
+   .org-list {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.org-item {
+  width: 120px;   /* uniform width */
+  height: 40px;   /* uniform height */
+  
+  overflow: hidden; /* prevent overflow */
+  display: flex;
+}
+
+.org-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the div completely */
+  display: block;
 }
 
 
-    
+    /* Industries container */
+    .industries-container {
+      background-color: #f9f5ef;
+      border-radius: 8px;
+      margin-top: 56px;
+      padding: 24px 16px;
+      color: #4a4a4a;
+      font-weight: 600;
+      font-size: 9px;
+      text-align: left;
+    }
+    .industries-container h3 {
+      margin: 0 0 16px 0;
+      font-weight: 600;
+      font-size: 12px;
+      color: #222222;
+      text-align: center;
+    }
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 12px;
+    }
+    .industry-item {
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-weight: 600;
+      font-size: 9px;
+      color: #4a4a4a;
+      text-align: center;
+      user-select: none;
+    }
+    /* Responsive */
+    @media (min-width: 640px) {
+   
+      .container-org h2 {
+        font-size: 20px;
+      }
+      p.description {
+        font-size: 12px;
+        max-width: 400px;
+      }
+      .org-item {
+        font-size: 10px;
+        padding: 10px 20px;
+      }
+      .industries-container {
+        font-size: 11px;
+        padding: 24px 32px;
+      }
+      .industries-container h3 {
+        font-size: 14px;
+      }
+      .industries-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px 16px;
+      }
+      .industry-item {
+        font-size: 11px;
+        padding: 8px 16px;
+      }
+    }
+ 
+  .closingbg{
+        background-color: #2f2e2c;
+
+
+}
+  .container-closingcall {
+    font-family: 'inter';
+    background-color: #2f2e2c;
+    color: white;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 64px 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .container-closingcall {
+      flex-direction: row;
+      gap: 80px;
+      padding-top: 96px;
+    }
+  }
+
+  /* Left Section */
+  .left-closing {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .heading {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 640px) {
+    .heading {
+      font-size: 32px;
+    }
+  }
+
+  .highlight {
+    font-weight: 800;
+    color: #b89f6a;
+  }
+
+  .subtext {
+    font-size: 14px;
+    color: #cfcfcf;
+    max-width: 400px;
+    margin: 0;
+  }
+
+  @media (min-width: 640px) {
+    .subtext {
+      font-size: 16px;
+    }
+  }
+
+  ul.features-closing {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 400px;
+    color: #cfcfcf;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  @media (min-width: 640px) {
+    ul.features-closing {
+      font-size: 14px;
+    }
+  }
+
+  ul.features-closing li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+  ul.features-closing li svg {
+    margin-top: 4px;
+    flex-shrink: 0;
+    fill: #b89f6a;
+    width: 12px;
+    height: 12px;
+  }
+
+  .btn-call {
+    background-color: #b89f6a;
+    color: #2f2e2c;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: filter 0.2s ease;
+  }
+
+  .btn-call:hover {
+    filter: brightness(110%);
+  }
+
+  .btn-call svg {
+    width: 14px;
+    height: 14px;
+    fill: #2f2e2c;
+  }
+
+  .limited-spots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    color: #7a7a7a;
+    user-select: none;
+  }
+
+  .limited-spots svg {
+    width: 12px;
+    height: 12px;
+    fill: #7a7a7a;
+  }
+
+  .btn-row {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* Right Section */
+  .right-closing {
+    flex: 1;
+    background-color: rgba(58, 58, 58, 0.2);
+    border-radius: 8px;
+    padding: 24px 32px;
+    font-size: 10px;
+    line-height: 1.3;
+    backdrop-filter: blur(8px);
+    color: #b8b8b8;
+  }
+
+  @media (min-width: 640px) {
+    .right-closing {
+      font-size: 12px;
+    }
+  }
+
+  .stars-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #b89f6a;
+  }
+
+  .stars-row svg {
+    width: 14px;
+    height: 14px;
+    fill: #b89f6a;
+  }
+
+  .quote {
+    font-style: italic;
+    color: white;
+    margin-bottom: 16px;
+  }
+
+  .quote strong {
+    font-weight: 600;
+  }
+
+  .profile-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .profile-info {
+    font-size: 10px;
+    color: #b8b8b8;
+  }
+
+  .profile-info strong {
+    color: white;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .trusted-text {
+    margin-bottom: 12px;
+  }
+
+  .trusted-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .trusted-item {
+    background-color: #4a4a4a;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    user-select: none;
+  }
+
+  @media (min-width: 640px) {
+    .trusted-item {
+      font-size: 10px;
+    }
+  }
+
+  .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #b8b8b8;
+    user-select: none;
+  }
+
+  @media (min-width: 640px) {
+    .stats-row {
+      font-size: 10px;
+    }
+  }
+
+  .stats-row span {
+    white-space: nowrap;
+  }
+
+  .stats-highlight {
+    color: #b89f6a;
+  }
+
+  /* Bottom note */
+  .bottom-note-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px 32px 24px;
+  }
+
+  .bottom-note {
+    font-size: 9px;
+    color: #7a7a7a;
+    background-color: rgba(58, 58, 58, 0.2);
+    border-radius: 9999px;
+    display: inline-block;
+    padding: 4px 20px;
+    user-select: none;
+    backdrop-filter: blur(8px);
+  }
+
+  @media (min-width: 640px) {
+    .bottom-note {
+      font-size: 10px;
+    }
+  }
+
+  .bottom-note strong {
+    color: #b89f6a;
+    font-weight: 600;
+  }
 </style>
 </head>
 <body>
@@ -548,16 +1511,80 @@
       />
     </div>
   </div>
+    <section class="section2">
+  <div class="container-sec2">
+    <section class="left">
+      <p class="subtitle-section2">PHILANTHROVIA GROUP</p>
+      <h2 class="h2">
+        Funding That Fuels 
+        <span class="highlight">  <br>Your Mission</span>
+      </h2>
+      <p class="description">
+The Philanthrovia Group stands out with unmatched expertise. Trusted by foundations worldwide, we deliver results that create lasting impact—turning your mission into funded reality while outpacing competitors.      </p>
+      <ul class="features" role="list">
+        <li>
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Precision Grant Strategy
+        </li>
+        <li>
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Board Support
+        </li>
+        <li>
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Program Evaluation
+        </li>
+        <li>
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Leadership Training
+        </li>
+      </ul>
+      <p class="note">
+        Our specialized consulting services include nonprofit incorporation and donor research<span class="line-through">—helping your organization thrive</span> with tailored expertise.
+      </p>
+      <div class="trusted">
+        <div class="avatars" aria-label="Trusted by 200+ nonprofits">
+          <img src="https://storage.googleapis.com/a1aa/image/1f1ba6c3-ecff-42be-ca9e-431edcca7d17.jpg" alt="Profile image of a woman with dark hair smiling" />
+          <img src="https://storage.googleapis.com/a1aa/image/7113f3db-87ed-4d6a-89da-07b6f44e59cf.jpg" alt="Profile image of a woman with brown hair smiling" />
+          <img src="https://storage.googleapis.com/a1aa/image/8308b191-8deb-4016-40a7-0af14c88f87d.jpg" alt="Profile image of a man with short hair smiling" />
+        </div>
+        <div class="trusted-text">
+          <strong>Trusted by 200+ nonprofits</strong>
+          <div class="rating" aria-label="Rating 4.9 out of 5 stars">
+            <span class="stars" aria-hidden="true">★ ★ ★ ★ ★</span>
+            <span class="score">4.9/5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="right">
+      <div class="image-wrapper">
+        <img src="https://storage.googleapis.com/a1aa/image/dfb89317-822b-4e2f-1d64-4629981f2acc.jpg" alt="Close-up photo of multiple hands joined together in a teamwork gesture on a desk with office items blurred in background" />
+        <div class="badges">
+          <span class="badge white">35+ Years Experience</span>
+          <span class="badge gold">$180M+ Raised</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
 
 
   <section>
     <div class="container-section1">
     <section class="top-section">
       <div class="left-side">
-        <h2 class="heading">
-            Secure Winning Grants Without <br>
-         the Guesswork<br />
-        </h2>
+              <h2 class="h24"><span class="gold"> Secure </span>Winning Grants<br> Without the Guesswork</h2>
+
+       
         <button style="text-align: left;" class="btn-shopify" disabled>
           <span> Rated #1 Grant writing Service <br></span>
         </button>
@@ -611,9 +1638,9 @@
 
     <section id="social-section" class="bottom-section">
       <div class="bottom-left">
-        <p class="desc">Boost your nonprofit’s funding with The Philanthrovia Group’s expert grant writing, Add-ons like nonprofit incorporation ($2,500 + fees), donor research, and fundraising strategies are offered at half the cost of consultants, anywhere.</p>
+        <p class="desc">Don’t let your nonprofit dream stall after paperwork. We turn passion projects into fully funded, thriving organizations.</p>
         <a href="#" class="learn-more" tabindex="0">
-          Start Your Nonprofit Journey <i class="fas fa-arrow-right"></i>
+          Start Your Grant Writing Journey <i class="fas fa-arrow-right"></i>
         </a>
       </div>
       <div class="circles-container">
@@ -654,7 +1681,267 @@
 
   </section>
 
+   <div class="container-testimonial">
+    <div class="header-testimonial">
+      <h2>Success Stories From Our Clients</h2>
+      <p>Don't just take our word for it. See what organizations we've helped have to say about our<br />grant writing services.</p>
+      <div class="underline"></div>
+  </div>
+    <section class="testimonials" aria-label="Client testimonials">
+      <article class="testimonial" aria-label="Testimonial from Dr. Rebecca Chen">
+        <img src="https://storage.googleapis.com/a1aa/image/65d4484b-2cdf-4f43-715e-d9ee744fd028.jpg" alt="Decorative double quote mark in light beige" class="quote-icon" aria-hidden="true" />
+        <div class="stars" aria-label="5 star rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Working with GrantSuccess transformed our funding strategy. They secured a $1.2M grant that allowed us to expand our community health initiative to five new locations. Their expertise and dedication to our mission made all the difference."</p>
+        <div class="author">
+          <img src="https://storage.googleapis.com/a1aa/image/46fd71e5-ba22-42c5-7b65-7b18c41e7333.jpg" alt="Portrait of Dr. Rebecca Chen, a woman with short dark hair wearing a white shirt" />
+          <div class="author-info">
+            <p>Dr. Rebecca Chen</p>
+            <p>Executive Director, Community Health Alliance</p>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial" aria-label="Testimonial from Marcus Johnson">
+        <img src="https://storage.googleapis.com/a1aa/image/65d4484b-2cdf-4f43-715e-d9ee744fd028.jpg" alt="Decorative double quote mark in light beige" class="quote-icon" aria-hidden="true" />
+        <div class="stars" aria-label="5 star rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"After struggling for years to secure consistent funding, we partnered with GrantSuccess. Within 6 months, they helped us secure three major grants totaling over $800,000. Their strategic approach completely changed our organization's trajectory."</p>
+        <div class="author">
+          <img src="https://storage.googleapis.com/a1aa/image/d6247caa-c5e5-4185-73cb-aabfba607dbd.jpg" alt="Portrait of Marcus Johnson, a man with short dark hair wearing a suit and tie" />
+          <div class="author-info">
+            <p>Marcus Johnson</p>
+            <p>CEO, Urban Education Initiative</p>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial" aria-label="Testimonial from Dr. Amelia Patel">
+        <img src="https://storage.googleapis.com/a1aa/image/65d4484b-2cdf-4f43-715e-d9ee744fd028.jpg" alt="Decorative double quote mark in light beige" class="quote-icon" aria-hidden="true" />
+        <div class="stars" aria-label="5 star rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"The team at GrantSuccess doesn't just write grants—they become true partners in your mission. They took the time to deeply understand our research goals and crafted proposals that perfectly aligned with our vision. The result? A $2.4M research grant that we had previously been denied twice."</p>
+        <div class="author">
+          <img src="https://storage.googleapis.com/a1aa/image/1c5c1d23-0742-44d1-ee6a-2ccc4a6fc1f1.jpg" alt="Portrait of Dr. Amelia Patel, a woman with medium length dark hair wearing a black top" />
+          <div class="author-info">
+            <p>Dr. Amelia Patel</p>
+            <p>Research Director, Environmental Science Institute</p>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial" aria-label="Testimonial from James Wilson">
+        <img src="https://storage.googleapis.com/a1aa/image/65d4484b-2cdf-4f43-715e-d9ee744fd028.jpg" alt="Decorative double quote mark in light beige" class="quote-icon" aria-hidden="true" />
+        <div class="stars" aria-label="5 star rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"As a small nonprofit, we didn't have the resources or expertise to navigate the complex grant landscape. GrantSuccess provided affordable solutions tailored to our budget and helped us secure our first major foundation grant. Their ROI is incredible—the grants they've secured have funded our work for years to come."</p>
+        <div class="author">
+          <img src="https://storage.googleapis.com/a1aa/image/20809f88-c222-41a1-b348-2a67e703be53.jpg" alt="Portrait of James Wilson, a man with short hair and beard wearing a blue shirt" />
+          <div class="author-info">
+            <p>James Wilson</p>
+            <p>Founder, Arts for All Youth Program</p>
+          </div>
+        </div>
+      </article>
+    </section>
 
+  </div>
+
+<section class="seclearnbg">
+    <section class="seclearn">
+    <div class="flex-row">
+      <div class="image-container">
+        <img src="https://storage.googleapis.com/a1aa/image/2111bc39-1ca8-4b1c-5b3d-6781001d4ad0.jpg" alt="Team meeting in a bright room with a woman pointing at sticky notes on a white wall, several people sitting around a table with laptops and papers" width="600" height="400" />
+      </div>
+      <div class="content-container">
+        <h2 class="h24">Learn From <span class="gold">Decades</span><br />of Experience</h2>
+        <p class="p">Our team offers workshops, webinars, and one-on-one coaching on:</p>
+        <div class="coaching-grid">
+          <div class="coaching-item">
+            <i class="fas fa-book-open" aria-hidden="true"></i>
+            <span>Fundraising best practices</span>
+          </div>
+          <div class="coaching-item">
+            <i class="fas fa-user-friends" aria-hidden="true"></i>
+            <span>Donor engagement</span>
+          </div>
+          <div class="coaching-item">
+            <i class="fas fa-balance-scale" aria-hidden="true"></i>
+            <span>Nonprofit compliance &amp; governance</span>
+          </div>
+          <div class="coaching-item">
+            <i class="fas fa-comments" aria-hidden="true"></i>
+            <span>Storytelling for impact</span>
+          </div>
+        </div>
+        <p>We also provide:</p>
+        <ul class="also-provide-list">
+          <li>
+            <span class="icon-circle"><i class="fas fa-search" aria-hidden="true"></i></span>
+            Research support
+          </li>
+          <li>
+            <span class="icon-circle"><i class="fas fa-file-alt" aria-hidden="true"></i></span>
+            Technical writing
+          </li>
+          <li>
+            <span class="icon-circle"><i class="fas fa-lightbulb" aria-hidden="true"></i></span>
+            Thought leadership
+          </li>
+        </ul>
+        <p class="final-text">All of our training programs are designed to strengthen your organization from within, building capacity that leads to sustainable growth and impact.</p>
+      </div>
+    </div>
+  </section>
+</section>
+
+<Section style="margin-top: 20px;">
+<div class="container-org">
+    <h2>Organizations We've Helped</h2>
+    <p class="description" style="      margin: 8px auto 0;">
+      We've partnered with organizations across various sectors to secure the funding they need to make an impact.
+    </p>
+    <div class="underline"></div>
+<div class="org-list" aria-label="Organizations">
+  <div class="org-item">
+    <img src="redCross.jpg" alt="Education Foundation">
+  </div>
+  <div class="org-item">
+    <img src="ventura.jpg" alt="Healthcare Institute">
+  </div>
+  <div class="org-item">
+    <img src="pomona.jpg" alt="Research Lab">
+  </div>
+  <div class="org-item">
+    <img src="circletheCity.jpg" alt="Community Services">
+  </div>
+  <div class="org-item">
+    <img src="simiValley.jpg" alt="Arts Council">
+  </div>
+  <div class="org-item">
+    <img src="IHQ.jpg" alt="Tech Startup">
+  </div>
+    <div class="org-item">
+    <img src="sunshine.jpg" alt="Tech Startup">
+  </div>
+    <div class="org-item">
+    <img src="lafamily.jpg" alt="Tech Startup">
+  </div>
+    <div class="org-item">
+    <img src="livingdesert.jpg" alt="Tech Startup">
+  </div>
+    <div class="org-item">
+    <img src="htg.jpg" alt="Tech Startup">
+  </div>
+  
+</div>
+
+
+
+    <div class="industries-container" aria-label="Industries We Serve">
+      <h3>Industries We Serve</h3>
+      <div class="industries-grid">
+        <div class="industry-item">Education</div>
+        <div class="industry-item">Healthcare</div>
+        <div class="industry-item">Scientific Research</div>
+        <div class="industry-item">Arts &amp; Culture</div>
+        <div class="industry-item">Environmental</div>
+        <div class="industry-item">Social Services</div>
+        <div class="industry-item">Technology</div>
+        <div class="industry-item">Community Development</div>
+      </div>
+    </div>
+  </div>
+</Section>
+  <Section class="closingbg">
+  <div class="container-closingcall">
+    <section class="left-closing" aria-label="Funding mission introduction and call to action">
+      <h1 class="heading">
+        Ready to <span class="highlight">Secure the Funding</span> Your Mission Deserves?
+      </h1>
+      <p class="subtext">
+        Don’t let another grant opportunity pass you by. Our proven methodology has helped organizations like yours secure millions in funding.
+      </p>
+      <ul class="features-closing" role="list">
+        <li>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16"><path d="M6 11.17L3.41 8.59 2 10l4 4 8-8-1.41-1.41z"/></svg>
+          Personalized grant strategy tailored to your organization’s unique mission
+        </li>
+        <li>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16"><path d="M6 11.17L3.41 8.59 2 10l4 4 8-8-1.41-1.41z"/></svg>
+          Access to our proprietary database of funding opportunities
+        </li>
+        <li>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16"><path d="M6 11.17L3.41 8.59 2 10l4 4 8-8-1.41-1.41z"/></svg>
+          Ongoing support from our team of experienced grant writers
+        </li>
+      </ul>
+      <div class="btn-row">
+        <button class="btn-call" aria-label="Book Your Strategy Call">
+          Book Your Strategy Call
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M10 17l5-5-5-5v10z"/></svg>
+        </button>
+        <div class="limited-spots">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 3.866 3.134 7 7 7s7-3.134 7-7a7 7 0 0 0-7-7zm0 12a5 5 0 0 1-5-5 5 5 0 0 1 10 0 5 5 0 0 1-5 5z"/></svg>
+          Limited spots available this month
+        </div>
+      </div>
+    </section>
+    <section class="right-closing" aria-label="Client reviews and trusted organizations">
+      <div class="stars-row" aria-label="Five star rating based on 200 plus client reviews">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <span>Based on 200+ client reviews</span>
+      </div>
+      <p class="quote">
+        “Working with The Philanthrovia Group transformed our fundraising strategy. We secured a <strong>$1.2M</strong> grant that has allowed us to expand our programs nationwide.”
+      </p>
+      <div class="profile-row">
+        <img src="https://storage.googleapis.com/a1aa/image/87e99808-8ac8-44b0-edc8-32b970fa6b3c.jpg" alt="Profile picture of Sarah Johnson, Executive Director, Community First Initiative" class="profile-pic" loading="lazy" width="40" height="40" />
+        <div class="profile-info">
+          <strong>Sarah Johnson</strong>
+          Executive Director, Community First Initiative
+        </div>
+      </div>
+      <p class="trusted-text">Trusted by organizations like:</p>
+      <div class="trusted-list" role="list">
+        <span class="trusted-item" role="listitem">Living Desert</span>
+        <span class="trusted-item" role="listitem">Cudahy</span>
+        <span class="trusted-item" role="listitem">Pamona College</span>
+      </div>
+      <div class="stats-row">
+        <span><span class="stats-highlight">96%</span> success rate</span>
+        <span><span class="stats-highlight">$180M+</span> in grants secured</span>
+        <span><span class="stats-highlight">35+</span> years experience</span>
+      </div>
+    </section>
+  </div>
+  <div class="bottom-note-container">
+    <p class="bottom-note"><strong>Note:</strong> We only accept a limited number of clients each quarter to ensure personalized attention</p>
+  </div>
+ </Section> 
+
+<footer>
+  <img
+    src="https://placehold.co/40x40?text=Logo&bg=E9DAC1&fg=333333"
+    alt="Treehouse Island logo, hexagon shape with a stylized tree branch inside"
+    width="350"
+    height="auto"
+  />
+  <p>©2025 The phylantrovia Group, Inc.</p>
+
+  <div class="social-icons" aria-label="Social media links">
+    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" aria-label="Google Plus"><i class="fab fa-google-plus-g"></i></a>
+    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
 
 
 
