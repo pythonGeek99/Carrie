@@ -490,17 +490,17 @@
       }
     }
 
-    .founder-text {
+    .founder-text-secure {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;        /* use px or clamp for better scaling */
+  font-size: 12px;        /* use px or clamp for better scaling */
   color: #333333;
   max-width: 288px;       /* allow it to shrink instead of fixed width */
   width: 100%;            /* take full width on mobile */
   margin-top: 0px;
 }
 
-.founder-name {
-  font-size: 13px;
+.founder-name-secure {
+  font-size: 14px;
   font-weight: bold;
   color: var(--muted-gold);
 }
@@ -532,8 +532,9 @@
   footer img {
     display: block;
     margin: 0 auto 8px;
-    width: 100px;
-    height: auto;
+    width: 350px;
+    height: 80px;
+    border-radius: 10px;
   }
 
   footer p {
@@ -1466,6 +1467,176 @@
     color: #b89f6a;
     font-weight: 600;
   }
+   .founder-wrap{
+    background-color: var(--color-ivory);
+
+   }
+
+   .founder-main {
+
+    max-width: 960px;
+    margin: 48px auto;
+    padding:  24px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-ivory);
+    color: var(--color-deep-charcoal);
+   }
+
+   /* Header Section */
+   .founder-header {
+
+    max-width: 420px;
+    margin: 0 auto 48px auto;
+    text-align: center;
+   }
+
+   .founder-header-title {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: black;
+   }
+
+   .founder-header-title .founder-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--color-muted-gold);
+   }
+
+   /* Content Section */
+   .founder-content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+   }
+
+   @media (min-width: 768px) {
+    .founder-content {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 48px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+   }
+
+   /* Image */
+   .founder-image-container {
+    position: relative;
+    padding: 8px;
+    flex-shrink: 0;
+    width: 320px;
+    max-width: 100%;
+   }
+
+   .founder-image {
+    display: block;
+    width: 100%;
+    height: auto;
+   }
+
+   .founder-label {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--color-ivory);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    user-select: none;
+    color: var(--sage-green);
+   }
+
+   /* Text */
+   .founder-text {
+    max-width: 480px;
+   }
+
+   .founder-name {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 0 12px 0;
+    color: var(--deep-charcoal);
+   }
+
+   .founder-intro {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--deep-charcoal);
+    margin: 0 0 16px 0;
+    line-height: 1.5;
+   }
+
+   /* Socials */
+   .founder-socials {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+   }
+
+   .founder-socials a {
+    color: var(--color-deep-charcoal);
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+   }
+
+   .founder-socials a:hover {
+    color: var(--color-muted-gold);
+   }
+
+   /* Experience */
+   .founder-experience-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--deep-charcoal);
+   }
+
+   .founder-experience-desc {
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+   }
+
+   .founder-experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+   }
+
+   .founder-experience-item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: var(--deep-charcoal);
+    margin-bottom: 12px;
+   }
+
+   .founder-experience-item:last-child {
+    margin-bottom: 0;
+   }
+
+   .founder-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-deep-charcoal);
+    color: var(--color-ivory);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    margin-right: 12px;
+    flex-shrink: 0;
+   }
 </style>
 </head>
 <body>
@@ -1506,7 +1677,7 @@
     </p>
     <div class="image-container">
       <img
-        src="hero.jpg"
+        src="hero2.jpg"
         alt=""
       />
     </div>
@@ -1630,8 +1801,8 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
         />
        
       </div>
-      <p class="founder-text">
-  Led by <span class="founder-name">Carrie Roberts</span>, our founder and a grant writing mastermind
+      <p class="founder-text-secure">
+  Led by <span class="founder-name-secure">Carrie Roberts</span>, our founder and a grant writing mastermind
 </p>
     </div>
     </section>
@@ -1683,7 +1854,7 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
 
    <div class="container-testimonial">
     <div class="header-testimonial">
-      <h2>Success Stories From Our Clients</h2>
+      <h2 >Success Stories From Our Clients</h2>
       <p>Don't just take our word for it. See what organizations we've helped have to say about our<br />grant writing services.</p>
       <div class="underline"></div>
   </div>
@@ -1853,7 +2024,59 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
       </div>
     </div>
   </div>
+
 </Section>
+
+  <section class="founder-wrap">
+  <section class="founder-main">
+    <section class="founder-header">
+      <h2 class="founder-header-title">
+        Meet Our <span class="founder-underline highlight">Founder</span>
+      </h2>
+    </section>
+
+    <section class="founder-content">
+      <div class="founder-image-container">
+        <img class="founder-image" src="carrie.jpg" alt="Carrie Roberts"/>
+        <span class="founder-label ">Grant Writing Mastermind</span>
+      </div>
+
+      <div class="founder-text">
+        <h3 class="founder-name ">Carrie Roberts</h3>
+        <p class="founder-intro">
+          A grant writing and fundraising strategist with a strong record of success, securing over $180M in funding for nonprofits, municipalities, and government entities. She is passionate about helping organizations expand programs and achieve long-term sustainability.
+        </p>
+
+        <div class="founder-socials" aria-label="Social media links">
+          <a aria-label="Facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a aria-label="Instagram" href="#"><i class="fab fa-instagram"></i></a>
+          <a aria-label="Email" href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <h4 class="founder-experience-title">Carrie Roberts Experience</h4>
+        <p class="founder-experience-desc">
+          With extensive experience in grant research, proposal development, and donor engagement, Carrie brings both academic insight and practical expertise to support mission-driven organizations.
+        </p>
+
+        <ul class="founder-experience-list">
+          <li class="founder-experience-item">
+            <span class="founder-check"><i class="fas fa-check"></i></span>
+            Secured $180M+ in funding for nonprofits, municipalities, and government entities.
+          </li>
+          <li class="founder-experience-item">
+            <span class="founder-check"><i class="fas fa-check"></i></span>
+            Expertise in grant research, proposal development, &amp; donor engagement.
+          </li>
+          <li class="founder-experience-item">
+            <span class="founder-check"><i class="fas fa-check"></i></span>
+            Faculty member training &amp; mentoring leaders in grant writing &amp; fundraising.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </section>
+  </section>
+
   <Section class="closingbg">
   <div class="container-closingcall">
     <section class="left-closing" aria-label="Funding mission introduction and call to action">
@@ -1927,10 +2150,10 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
 
 <footer>
   <img
-    src="https://placehold.co/40x40?text=Logo&bg=E9DAC1&fg=333333"
+    src="logo.jpg"
     alt="Treehouse Island logo, hexagon shape with a stylized tree branch inside"
-    width="350"
-    height="auto"
+    width="auto"
+    height="80px"
   />
   <p>©2025 The phylantrovia Group, Inc.</p>
 
