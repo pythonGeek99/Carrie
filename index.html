@@ -17,7 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+  <link rel="stylesheet" href="bookingstyle.css">
+<script src="bookingFunc.js"></script>
   <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
@@ -654,7 +655,7 @@
   }
 
   p.description {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     max-width: 480px;
     margin-bottom: 24px;
@@ -1079,7 +1080,7 @@
       margin: 0;
     }
     p.description {
-      font-size: 13px;
+      font-size: 15px;
       color: #666666;
       max-width: 320px;
       line-height: 1.2;
@@ -1155,7 +1156,7 @@
         font-size: 20px;
       }
       p.description {
-        font-size: 13px;
+        font-size: 15px;
         max-width: 400px;
       }
       .org-item {
@@ -1648,15 +1649,15 @@
       </h1>
       <p class="subtitle">Transform your nonprofit with The Philanthrovia Group’s expert grant writing. With 35+ years of experience and $180M raised for clients, we secure winning proposals to fuel lasting impact.</p>
       <div class="btn-group">
-        <button class="btn btn-white" type="button">learn More</button>
-        <button class="btn btn-purple" type="button">
-          Book your free consultaiion<i class="fas fa-arrow-right"></i>
+        <button class="btn btn-white" type="button">Learn More</button>
+        <button class="btn btn-purple" type="button" onclick="openModal()">
+          Book your free consultation<i class="fas fa-arrow-right"></i>
         </button>
       </div>
       <div class="small-text">
         <span>*Your first step toward funding success</span>
         <i class="fas fa-circle"></i>
-        <span>Talk to an expert who’s helped raise $180M+</span>
+        <span>Talk to an expert who’s has raised $180M+</span>
       </div>
     </header>
     <div> </div>
@@ -1685,13 +1686,12 @@
     <section class="section2">
   <div class="container-sec2">
     <section class="left">
-      <p class="subtitle-section2">PHILANTHROVIA GROUP</p>
+      <p class="subtitle-section2">The PHILANTHROVIA GROUP</p>
       <h2 class="h2">
         Funding That Fuels 
         <span class="highlight">  <br>Your Mission</span>
       </h2>
-      <p class="description">
-The Philanthrovia Group stands out with unmatched expertise. Trusted by foundations worldwide, we deliver results that create lasting impact—turning your mission into funded reality while outpacing competitors.      </p>
+      <p class="description">The Philanthrovia Group stands out with unmatched expertise. Trusted by Nonprofit Organizations, governmental entities and Faith based communities worldwide, we deliver results that create lasting impact—turning your mission into funded reality while outpacing competitors.      </p>
       <ul class="features" role="list">
         <li>
           <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
@@ -1717,7 +1717,14 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
           </svg>
           Leadership Training
         </li>
+                <li>
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+          </svg>
+          Nonprofit incorporation
+        </li>
       </ul>
+      
       <p class="note">
         Our specialized consulting services include nonprofit incorporation and donor research<span class="line-through">—helping your organization thrive</span> with tailored expertise.
       </p>
@@ -1757,7 +1764,7 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
 
        
         <button style="text-align: left;" class="btn-shopify" disabled>
-          <span> Rated #1 Grant writing Service <br></span>
+          <span> Rated #1 Grant Writing Service <br></span>
         </button>
         <div class="stats-list">
           <div class="stat-item">
@@ -1802,14 +1809,13 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
        
       </div>
       <p class="founder-text-secure">
-  Led by <span class="founder-name-secure">Carrie Roberts</span>, our founder and a grant writing mastermind
-</p>
+  Led by <span class="founder-name-secure">Carrie Roberts</span>, founder,grant writing mastermind and  Nonprofit organization expert</p>
     </div>
     </section>
 
     <section id="social-section" class="bottom-section">
       <div class="bottom-left">
-        <p class="desc">Don’t let your nonprofit dream stall after paperwork. We turn passion projects into fully funded, thriving organizations.</p>
+        <p class="desc">Get the assistance you need to secure Grants and your organization Forward</p>
         <a href="#" class="learn-more" tabindex="0">
           Start Your Grant Writing Journey <i class="fas fa-arrow-right"></i>
         </a>
@@ -2148,6 +2154,8 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
   </div>
  </Section> 
 
+ 
+
 <footer>
   <img
     src="logo.jpg"
@@ -2166,6 +2174,206 @@ The Philanthrovia Group stands out with unmatched expertise. Trusted by foundati
   </div>
 </footer>
 
+ <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <!-- Header -->
+            <div class="modal-header">
+                <div>
+                    <h2 class="modal-title">Book Your Consultation</h2>
+                </div>
+           
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+                 <div class="step-info">
+                    <span>Step <span id="currentStepNum">1</span> of 4</span>
+                    <span id="stepTitle">Basic Information</span>
+                </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 25%"></div>
+                </div>
+            </div>
+
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <!-- Step 1: Basic Information -->
+                <div class="step active" id="step1">
+                    <div class="form-group">
+                        <label class="form-label" for="firstName">First Name</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            class="form-input" 
+                            placeholder="Enter your first name"
+                            required
+                        />
+                        <div class="error-text" id="firstNameError" style="display: none;"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            class="form-input" 
+                            placeholder="Enter your email"
+                            required
+                        />
+                        <div class="error-text" id="emailError" style="display: none;"></div>
+                        <div class="help-text">We'll send confirmation and reminders to your email.</div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Choose Time -->
+                <div class="step" id="step2">
+                    <div class="section-title">Select a Date & Time</div>
+                                        <div class="spots-text">Consultations are free and spots fill quickly. Secure yours now.</div>
+
+                    
+                    <div class="calendly-container" id="calendlyContainer">
+                        <!-- Calendly widget will be loaded here dynamically by JavaScript -->
+                        <div style="text-align: center; padding: 40px;">
+                            <div class="calendly-icon">
+                                <div class="calendly-inner"></div>
+                            </div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">Loading Calendly...</div>
+                            <div style="font-size: 14px; color: #999;">Please wait while the scheduler loads.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Step 3: Your Nonprofit -->
+                <div class="step" id="step3">
+                    <div class="section-title">Your Nonprofit Status</div>
+                    <div class="radio-group" id="nonprofitStatus">
+                        <div class="radio-option" onclick="selectOption('nonprofitStatus', 'Just starting out', this)">
+                            <input type="radio" name="nonprofitStatus" value="Just starting out">
+                            Just starting out
+                        </div>
+                        <div class="radio-option" onclick="selectOption('nonprofitStatus', 'Already incorporated', this)">
+                            <input type="radio" name="nonprofitStatus" value="Already incorporated">
+                            Already incorporated
+                        </div>
+                        <div class="radio-option" onclick="selectOption('nonprofitStatus', 'Established (3+ years)', this)">
+                            <input type="radio" name="nonprofitStatus" value="Established (3+ years)">
+                            Established (3+ years)
+                        </div>
+                    </div>
+                    <div class="error-text" id="nonprofitError" style="display: none;"></div>
+
+                    <div class="section-title">Your Biggest Priority</div>
+                    <div class="radio-group" id="priority">
+                        <div class="radio-option" onclick="selectOption('priority', 'Incorporation', this)">
+                            <input type="radio" name="priority" value="Incorporation">
+                            Incorporation
+                        </div>
+                        <div class="radio-option" onclick="selectOption('priority', 'Fundraising', this)">
+                            <input type="radio" name="priority" value="Fundraising">
+                            Fundraising
+                        </div>
+                        <div class="radio-option" onclick="selectOption('priority', 'Both', this)">
+                            <input type="radio" name="priority" value="Both">
+                            Both
+                        </div>
+                        <div class="radio-option" onclick="selectOption('priority', 'Other strategic needs', this)">
+                            <input type="radio" name="priority" value="Other strategic needs">
+                            Other strategic needs
+                        </div>
+                    </div>
+                    <div class="error-text" id="priorityError" style="display: none;"></div>
+
+                    <div class="help-text">We'll tailor your first call based on your goals.</div>
+                </div>
+
+                <!-- Step 4: Confirm -->
+                <div class="step" id="step4">
+                    <div class="section-title">Your Consultation Details</div>
+                    <div class="confirmation-card">
+                        <div class="detail-row">
+                            <span class="detail-label">Name:</span>
+                            <span class="detail-value" id="confirmName"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Email:</span>
+                            <span class="detail-value" id="confirmEmail"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Date:</span>
+                            <span class="detail-value" id="confirmDate"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Time:</span>
+                            <span class="detail-value" id="confirmTime"></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value" id="confirmDuration">30 minutes</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Consultant:</span>
+                            <span class="detail-value">Carrie</span>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="commitment" class="checkbox" onchange="toggleCommitment()">
+                        <label class="checkbox-label" for="commitment">
+                            I'm committed to attending my consultation.
+                        </label>
+                    </div>
+                    <div class="error-text" id="commitmentError" style="display: none;"></div>
+
+                    <div class="why-choose-us">
+                        <div class="why-title">Why Choose Us:</div>
+                        <div class="benefit-item">
+                            <div class="benefit-dot"></div>
+                            <span>35+ years experience</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-dot"></div>
+                            <span>$180M raised for clients</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-dot"></div>
+                            <span>Trusted by 25+ nonprofits</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-back" id="backBtn" onclick="previousStep()" style="display: none;">
+                        ← Back
+                    </button>
+                    <button class="btn btn-next" id="nextBtn" onclick="nextStep()">
+                        Next →
+                    </button>
+                </div>
+
+                <div class="privacy-text">
+                    Your information is private and only used to book your consultation.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-modal">
+            <div class="money-animation" id="moneyAnimation"></div>
+            <div class="success-icon">✓</div>
+            <h3 class="success-title">🎉 Meeting Booked Successfully!</h3>
+            <p class="success-message">
+                Thank you! Your consultation has been confirmed. We look forward to speaking with you.
+            </p>
+            <div class="success-details">
+                Confirmation details have been sent to your email.
+            </div>
+        </div>
+    </div>
 
 
   <script>
