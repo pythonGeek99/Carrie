@@ -2,12 +2,20 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>The phylantrovia Group</title>
+  <title>Grant Writing & Fundraising Services — Philanthrovia Group</title>
+  
+<meta name="description" content="Secure winning grants with Philanthrovia Group. $180M+ raised for nonprofits through expert proposals, donor research, and fundraising strategies." />
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet"
   />
+  <meta property="og:title" content="Grant Writing & Fundraising Services — Philanthrovia Group" />
+<meta property="og:description" content="Winning grant proposals, donor research, and fundraising strategies. $180M+ raised for nonprofits worldwide." />
+<meta property="og:image" content="https://philanthroviagroup.com/assets/grant-writing-og.jpg" />
+<meta property="og:url" content="https://philanthroviagroup.com/grant-writing" />
+<meta name="twitter:card" content="summary_large_image" />
+
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -19,6 +27,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="bookingstyle.css">
 <script src="bookingFunc.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Grant Writing & Fundraising",
+  "description": "Winning grant proposals, donor prospect research, tailored fundraising strategies, and long-term revenue planning. Over $180M raised for nonprofits.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Philanthrovia Group",
+    "url": "https://philanthroviagroup.com"
+  },
+  "areaServed": "United States",
+  "serviceType": "Grant Writing, Fundraising Consulting",
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://philanthroviagroup.com/book"
+    }
+  }
+},
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes your grant writing services different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With $180M+ raised and 35+ years of experience, Philanthrovia crafts winning proposals tailored to funders' priorities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you help small nonprofits apply for grants?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we specialize in grant writing for both small and large nonprofits, with strategies scaled to your mission."
+      }
+    }
+  ]
+}
+
+</script>
+
   <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
@@ -1638,9 +1693,166 @@
     margin-right: 12px;
     flex-shrink: 0;
    }
+    .demo-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--sage-green);
+    border-radius: 8px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    text-align: left;
+    max-width: 320px;
+  }
+
+  .demo-button img {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+
+  .demo-button .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .demo-button .main-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--nude-beige);
+    line-height: 1.2;
+  }
+
+  .demo-button .sub-text {
+    font-size: 13px;
+    color: var(--ivory);
+    margin-top: 3px;
+    line-height: 1.2;
+  }
+      .announcement-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 28px; /* very slim height */
+      background: linear-gradient(90deg, var(--ivory) 0%, var(--nude-beige) 100%);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+      border-bottom: 1px solid var(--muted-gold);
+      overflow: hidden;
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s ease;
+      display: flex;
+      align-items: center;
+      user-select: none;
+      padding-left: 12px;
+      padding-right: 40px; /* space for close button */
+      backdrop-filter: saturate(180%) blur(8px);
+      -webkit-backdrop-filter: saturate(180%) blur(8px);
+    }
+
+    /* Show state */
+    .announcement-bar.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Marquee wrapper */
+    .marquee-wrapper {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+    }
+
+    /* Marquee text */
+    .marquee-text {
+      display: inline-block;
+      white-space: nowrap;
+      color: var(--deep-charcoal);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+      padding-left: 100%; /* start off-screen right */
+      animation: marquee 20s linear infinite;
+    }
+
+    /* Highlighted text */
+    .marquee-text strong {
+      color: var(--muted-gold);
+      font-weight: 700;
+    }
+
+    /* Separator dot */
+    .separator {
+      margin: 0 0.4rem;
+      color: var(--deep-charcoal);
+      font-weight: 700;
+      user-select: none;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--deep-charcoal);
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 18px;
+      line-height: 1;
+      opacity: 0.7;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      user-select: none;
+    }
+    .close-btn:hover,
+    .close-btn:focus {
+      background-color: var(--muted-gold);
+      color: var(--warm-taupe);
+      opacity: 1;
+      outline: none;
+      box-shadow: 0 0 8px var(--muted-gold);
+    }
+
+    /* Marquee animation */
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Responsive font size */
+    @media (min-width: 640px) {
+      .marquee-text {
+        font-size: 0.95rem;
+      }
+    }
 </style>
 </head>
 <body>
+    <div class="announcement-bar" id="announcementBar" role="region" aria-label="Announcement">
+    <div class="marquee-wrapper" aria-live="polite" aria-atomic="true">
+      <div class="marquee-text" id="marqueeText" aria-hidden="true">
+        <strong>Get expert help with your DHCD Grant before the deadline.</strong>
+        <span class="separator">•</span>
+        <strong>$180M+</strong> raised for nonprofits — yours could be next.
+      </div>
+    </div>
+    <button class="close-btn" aria-label="Close announcement" onclick="closeAnnouncement()">&times;</button>
+  </div>
   <div class="container">
     <header>
       <h1>
@@ -1648,12 +1860,13 @@
        
       </h1>
       <p class="subtitle">Transform your nonprofit with The Philanthrovia Group’s expert grant writing. With 35+ years of experience and $180M raised for clients, we secure winning proposals to fuel lasting impact.</p>
-      <div class="btn-group">
-        <button class="btn btn-white" type="button">Learn More</button>
-        <button class="btn btn-purple" type="button" onclick="openModal()">
-          Book your free consultation<i class="fas fa-arrow-right"></i>
-        </button>
-      </div>
+      <button class="demo-button" type="button" onclick="openModal()">
+        <img src="carriesmall.jpg" alt="Harry" />
+        <div class="text-container">
+          <span class="main-text">Book a demo with Carrie</span>
+          <span class="sub-text">(friendly tour, not a sales pitch)</span>
+        </div>
+      </button>
       <div class="small-text">
         <span>*Your first step toward funding success</span>
         <i class="fas fa-circle"></i>
@@ -2182,7 +2395,7 @@
                     <h2 class="modal-title">Book Your Consultation</h2>
                 </div>
            
-                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <button class="close-btn-modal" onclick="closeModal()">&times;</button>
             </div>
                  <div class="step-info">
                     <span>Step <span id="currentStepNum">1</span> of 4</span>
@@ -2480,6 +2693,22 @@
       countElements.forEach((el) => observer.observe(el));
       circleSvgs.forEach((el) => observer.observe(el));
     });
+
+        window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const bar = document.getElementById('announcementBar');
+        bar.classList.add('show');
+      }, 5000);
+    });
+
+    // Close button handler
+    function closeAnnouncement() {
+      const bar = document.getElementById('announcementBar');
+      bar.classList.remove('show');
+      setTimeout(() => {
+        bar.style.display = 'none';
+      }, 600);
+    }
   </script>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
